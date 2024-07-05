@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
     /* --primary: #bc8e45; */
-    --primary: #bc8e45;
+    --primary: #91ba52;
     /* --secondary: #51CFED; */
-    --secondary: #88570a;
+    --secondary: #56892e;
     --light: #F8F2F0;
     --dark: #060315;
 }
@@ -129,7 +129,7 @@ a:hover{
 }
 
 .logo-height{
-    height: 110px;
+    height: 50px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -187,13 +187,13 @@ a:hover{
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 500px;
+        min-height: 490px;
     }
     
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 50%;
         object-fit: cover;
     }
 
@@ -241,7 +241,7 @@ a:hover{
 }
 
 .page-header {
-    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/h12_papercone.jpg) center center no-repeat;
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/imgonline-com-ua-twotoone-XPc7Qb97QFgq.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -251,7 +251,7 @@ a:hover{
 }
 
 .page-header-why-choose-us{
-    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/yarn-care-exports-why-choose-us.jpg) center center no-repeat;
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/eco-paper-products-why-choose-us-banner.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -263,13 +263,178 @@ a:hover{
     color: #555;
 }
 
-.page-header-paper-tubes{
-    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/yarn-care-export-paper-tubes-bg.jpg) center center no-repeat;
+.page-header-colored-paper-stick-product{
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/eco-paper-stick-colored-paper-stick-banner-image.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .page-header-quality-control{
-    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/yarn-care-export-quality-control-banner.jpg) center center no-repeat;
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/eco-paper-stick-product-quality-control-banner1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/* Carousal add for demo */
+.carousel {
+    aspect-ratio: 16/9;
+    width: var(--width);
+    height: auto;
+    position: relative;
+
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.4);
+
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: none;
+    border: none;
+
+    height: 100%;
+    width: 3rem;
+
+    z-index: 2;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow > img {
+    height: 2rem;
+    transition: all 400ms ease-in-out;
+}
+
+.back-arrow {
+    left: 0;
+}
+
+.back-arrow:hover > img {
+    transform: translateX(-30%) scale(1.4);
+}
+
+.next-arrow {
+    right: 0;
+}
+
+.next-arrow:hover > img {
+    transform: translateX(30%) scale(1.4);
+}
+
+.slide:not(.showcase) {
+    width: 0;
+}
+
+.showcase {
+    left: 0;
+    width: 100%;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    transition: all ease-in-out var(--duration);
+}
+
+.overlay {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.65172006302521) 0%,
+        rgba(48, 48, 48, 0) 15%
+    );
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+
+    width: 20rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    color: white;
+
+    z-index: 2;
+
+    transition: all ease-in-out var(--duration);
+}
+
+.slide:not(.showcase) > .slide-info {
+    opacity: 0;
+}
+
+.slide-info > img {
+    width: 12rem;
+}
+
+.slide-info > button {
+    padding: 0.4rem 1rem;
+    width: 10rem;
+
+    border: 0px;
+    border-radius: 0.4rem;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.slide-info > p {
+    text-wrap: wrap;
+}
+
+.slide-bg {
+    position: relative;
+
+    width: var(--width);
+
+    left: 50%;
+    transform: translatex(-50%);
+
+    margin: 0;
+}
+/* Carousal add for demo */
+
+.page-header-echo-paper-stick-home{
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/imgonline-com-ua-twotoone-XPc7Qb97QFgq.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header-echo-paper-stick-white-stick-product-page{
+    background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/eco-paper-stick-product-paper-stick-banner-image.jpeg) center center no-repeat;
     background-size: cover;
 }
 
@@ -290,6 +455,9 @@ a:hover{
     color: var(--light);
 }
 
+.height-video-home{
+    height: 400px;
+}
 
 /*** About ***/
 @media (min-width: 992px) {
@@ -322,7 +490,7 @@ a:hover{
 }
 
 .font-color-grey{
-    color: #88570a;
+    color: #91ba52;
 }
 
 .h1-replacement-2{
@@ -613,12 +781,18 @@ a:hover{
     .img-papercone{
         height: 100%;
     }
+    .height-video-home{
+        height: 300px;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .img-papercone{
         height: 100%;
+    }
+    .height-video-home{
+        height: 300px;
     }
 }
 
@@ -755,7 +929,7 @@ img {
     left: unset;
 }
 .stories__post-block--red-tint {
-    background: linear-gradient(to right, #bc8e45 0%, #dbaf6a 100%) !important;
+    background: linear-gradient(to right, #91ba52 0%, #91ba52 100%) !important;
 }
 
 img {
@@ -787,7 +961,7 @@ section.wow.fadeIn{
     font-size: 13px;
 }
 
-.padding-container-fluid-paper-tubes{
+.padding-container-fluid-colored-paper-stick-product{
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -805,7 +979,7 @@ section.wow.fadeIn{
     left: 0;
     font-family: Font Awesome\ 5 Free;
     font-weight: 400;
-    color: #bc8e45;
+    color: #91ba52;
 }
 
 @keyframes fadeInLeft {
@@ -831,7 +1005,7 @@ section.wow.fadeIn{
 }
 
 .text-ramand {
-    color: #bc8e45;
+    color: #91ba52;
 }
 .font-weight-600 {
     font-weight: 600;
